@@ -1,0 +1,56 @@
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name dechat.space www.dechat.space;
+	return 301 https://$server_name$request_uri;
+}
+
+server {
+	server_name dechat.space www.dechat.space;
+	listen 443 ssl http2;
+	listen [::]:443 ssl http2;
+
+	ssl_certificate /etc/letsencrypt/live/dechat.space/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/dechat.space/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    root /var/www/dechat.space/html;
+
+    location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://193.191.169.45:5000;
+        }
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name frontend.dechat.space www.frontend.dechat.space;
+	
+	root /var/www/dechat.space/html/Vue/dist;
+	index index.html index.htm index.nginx-debian.html;
+
+	error_page 404 /index.html;
+
+    location / {
+             
+        }
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name linked.dechat.space www.linked.dechat.space;
+	
+	root /var/www/dechat.space/html;
+
+    location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://193.191.169.45:5001;
+        }
+
+}

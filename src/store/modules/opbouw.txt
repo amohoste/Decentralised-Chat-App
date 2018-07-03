@@ -1,0 +1,54 @@
+Voorbeeldopbouw store
+
+const user = {
+    username: 'amohoste',
+    datapod: 'http://groep24.webdev.ilabt.imec.be:2002/'
+};
+
+const contacts = [{
+    id: '5ab9545fa3475d55445fb204',
+    firstname: 'Arne',
+    lastname: 'Goeteyn',
+    nickname: 'aggoetey',
+    image: 'https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg',
+    datapod: 'http://www.example.com',
+    messages: [1, 3, 5]
+}, {
+    id: '5abdf58aa3475d55445fb20e',
+    firstname: 'Dries',
+    lastname: 'Marzougui',
+    nickname: 'dmarzoug',
+    datapod: 'http://www.example.com',
+    messages: [2, 4]
+}];
+
+
+const messages = {
+    '5ab9545fa3475d55445fb204': [{
+        id: '1',
+        received: false,
+        content: 'Dit is een niet ontvangen bericht',
+        time: '12:00'
+    }, {id: '3', received: true, content: 'Dit is een ontvangen bericht', time: '13:00'}, {
+        id: '5',
+        received: false,
+        content: 'Dit is een niet ontvangen bericht',
+        time: '14:00'
+    }],
+    '5abdf58aa3475d55445fb20e': [{
+        id: '1',
+        received: false,
+        content: 'Dit is een niet ontvangen bericht',
+        time: '08:00'
+    }, {id: '3', received: true, content: 'Dit is een ontvangen bericht', time: '11:30'}]
+};
+
+
+const profile = {
+    image: 'https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg',
+    gender: 'Male',
+    firstname: 'Amory',
+    lastname: 'Hoste',
+    email: 'amory.hoste@example.com',
+    phone: '0499999999'
+};
