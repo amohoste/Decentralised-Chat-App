@@ -5,8 +5,8 @@ Made a decentralised Chat App.
 
 ## Implementations
 - Linked Front End (this): Front End Version (VueJS) using Linked Data. Also uses Linked Data Fragments.
-- [Linked Back End](https://github.com/amohoste/Decentralised-Chat-App-Linked-BackEnd): Back End Version (NodeJS) using Linked Data. Also uses Linked Data Fragments.
-- [Back End Rest](https://github.com/amohoste/Decentralised-Chat-App-Rest-BackEnd): Back End Version expecting a Rest Api as the users data storage.
+- [Linked Back End](https://github.com/amohoste/Decentralised-Chat-App-Linked-BackEnd): Back End Version (NodeJS, Express) using Linked Data. Also uses Linked Data Fragments.
+- [Back End Rest](https://github.com/amohoste/Decentralised-Chat-App-Rest-BackEnd): Back End Version (NodeJS, Express) expecting a Rest Api as the users data storage.
 
 ## Collaborators
 This repo was part of a group project around Linked Data. My other team members made a Decentralised music app, profile viewer app, calendar app and a sample Rest Api.
